@@ -52,7 +52,7 @@ group :development do
 end
 
 group :system_tests do
-  gem 'beaker-puppet_install_helper',  '0.7.1', :require => false
+  gem 'beaker-puppet_install_helper',  :github => 'hunner/beaker-puppet_install_helper', :branch => 'fix_collections', :require => false
   gem "puppet-module-posix-system-r#{minor_version}",                            :require => false, :platforms => "ruby"
   gem "puppet-module-win-system-r#{minor_version}",                              :require => false, :platforms => ["mswin", "mingw", "x64_mingw"]
   gem "beaker", *location_for(ENV['BEAKER_VERSION'] || '>= 3')
